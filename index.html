@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Rock-Paper-Scissors</h1>
+    </div>
+    <div class="game">
+        <div class="intro">
+            <button><h2>Let's Play</h2></button>
+        </div>
+        <div class="options fadeOut">
+            <div class="option-img">
+                <div class="rock" data-selection="rock">
+                    <img src="/images/rock.png">
+                </div>
+            </div>
+            <div class="option-img">
+                <div class="paper" data-selection="paper">
+                    <img src="/images/paper.png">
+                </div>
+            </div>
+            <div class="option-img">
+                <div class="scissors" data-selection="scissors">
+                    <img src="/images/scissors.png">
+                </div>
+            </div>
+        </div>
+        <div class="outcome">
+            <div class="player-side">
+                <div class="player-choice">
+                    <img id="player-fist" src="/images/fist.png">
+                </div>
+            </div>
+            <div class="score">
+                <div class="counters">
+                <h2>Score</h2>
+                <p class="player-count"><h3>Player:</h3> <span id="playerCounter"></span></p>
+                <p class="cpu-count"><h3>Computer:</h3> <span id="cpuCounter"></span></p>
+                <p class="draw-count"><h3>Draw:</h3> <span id="drawCounter"></span></p>
+                </div>
+                <div class="who-wins">
+                    <h2><span id="whoWon"></span></h2>
+                </div>
+            </div>
+            <div class="cpu-side">
+                <div class="cpu-choice">
+                    <img id="cpu-fist" src="/images/fist.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

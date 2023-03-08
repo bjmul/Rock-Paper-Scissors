@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    padding-top: 25px;
+}
+
+.game {
+    border: 5px solid black;
+    background-color: #C8A4D4;
+    height: 80vh;
+    width: 80vw;
+    margin: 200px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.intro {
+    width: 100%;
+    height: 39.5vh;
+    position: absolute;
+    background-color: #C8A4D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 0.4s ease 0.4s;
+}
+
+.intro button {
+    width: 50%;
+    height: 20%;
+    border-radius: 20px;
+    border: 5px solid black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #966aa5;
+    cursor: pointer;
+}
+
+.intro button:hover {
+    background-color: #844c96;
+    color: white;
+    transition: 0.4s ease;
+}
+
+.options {
+    width: 100%;
+    height: 39.5vh;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: 0.4s ease 0.5s;
+}
+
+.options img {
+    width: 150px;
+    height: 150px;
+}
+
+.rock, .paper, .scissors {
+    border: 5px solid black;
+    padding: 40px;
+    border-radius: 50%;
+    transform: scale(0.9);
+    transition: 0.4s ease;
+}
+
+.option-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+    transform: scale(1.0);
+    transition: 0.4s ease;
+    cursor: pointer;
+    background-color: #844c96;
+}
+
+.outcome {
+    width: 100%;
+    height: 39.5vh;
+    top: 40vh;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 5px solid black;
+}
+
+.score {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.counters {
+    width: 200px;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.who-wins {
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cpu-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cpu-choice {
+    border: 5px solid black;
+    padding: 40px;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+}
+
+.player-choice {
+    border: 5px solid black;
+    padding: 40px;
+    border-radius: 50%;
+    transform: scaleX(-1) rotate(-90deg);
+}
+
+.cpu-choice img {
+    width: 150px;
+    height: 150px;
+    animation: shakeHands 4s linear infinite;
+}
+
+.player-choice img {
+    width: 150px;
+    height: 150px;
+    animation: shakeHands 4s linear infinite;
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakeHands {
+    0% {
+        transform: translateX(-20px);
+    }
+    10% {
+        transform: translateX(25px);
+    }
+    20% {
+        transform: translateX(-20px);
+    }
+    30% {
+        transform: translateX(25px);
+    }
+    40% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(25px);
+    }
+    60% {
+        transform: translateX(-20px);
+    }
+    70% {
+        transform: translateX(25px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    90% {
+        transform: translateX(25px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .title h1 {
+        padding-top: 10px;
+    }
+    .who-wins {
+        width: 100%;
+        height: 50px;
+    }
+    .counters {
+        width: 100px;
+    }
+    .score {
+        font-size: 0.5rem;
+        text-align: justify;
+    }
+    .options img {
+        width: 25px;
+        height: 25px;
+    }
+    .cpu-choice img {
+        width: 50px;
+        height: 50px;
+    }
+    .player-choice img {
+        width: 50px;
+        height: 50px;
+    }
+    .player-choice {
+        padding: 15px;
+    }
+    .cpu-choice {
+        padding: 15px;
+    }
+    .rock, .paper, .scissors {
+        padding: 15px;
+    }
+}
+
+@media (max-height: 800px) {
+    .title h1 {
+        padding-top: 10px;
+    }
+    .who-wins {
+        width: 100%;
+        height: 50px;
+    }
+    .counters {
+        width: 100px;
+    }
+    .score {
+        font-size: 0.6rem;
+        text-align: justify;
+    }
+    .options img {
+        width: 50px;
+        height: 50px;
+    }
+    .cpu-choice img {
+        width: 50px;
+        height: 50px;
+    }
+    .player-choice img {
+        width: 50px;
+        height: 50px;
+    }
+    .player-choice {
+        padding: 15px;
+    }
+    .cpu-choice {
+        padding: 15px;
+    }
+    .rock, .paper, .scissors {
+        padding: 15px;
+    }
+}
